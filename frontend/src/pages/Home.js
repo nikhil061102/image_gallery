@@ -13,6 +13,7 @@ function Home() {
         return response.json();
       })
       .then(data => {
+        console.log(data)
         setPhotos(data);
       })
       .catch(error => console.log(error));
@@ -21,7 +22,7 @@ function Home() {
   return (
     <>
       <Navbar setUpdateUI={setUpdateUI}/>
-      <Grid photos={photos} />
+      <Grid photos={photos} setUpdateUI={setUpdateUI}/>
     </>
   );
 }

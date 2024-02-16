@@ -15,14 +15,13 @@ const Button = ({ setUpdateUI }) => {
       return response.json();
     })
     .then(data => {
-      setUpdateUI(data._id);
+      setUpdateUI("SAVE"+data._id);
     })
     .catch(error => console.log(error));
   };
 
   return (
     <label className="btn btn-light" htmlFor="file_picker">
-      {/* You can replace the icon with a regular plus sign or any other suitable text or icon */}
       + Add Photo
       <input
         hidden

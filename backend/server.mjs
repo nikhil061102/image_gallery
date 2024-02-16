@@ -10,7 +10,7 @@ import connectDB from "./config/db.mjs";
 connectDB();
 
 import UploadRoute from "./routes/UploadRoute.mjs";
-app.use(UploadRoute);
+app.use("/api", UploadRoute);
 import userRoutes from './routes/userRoutes.mjs'
 app.use("/user", userRoutes);
 
